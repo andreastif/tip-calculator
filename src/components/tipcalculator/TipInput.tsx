@@ -1,12 +1,10 @@
-export const TipInput = ({
-  price,
-  onHandleSetPrice,
-  children,
-}: {
+interface TipInputProps {
   price: number;
   onHandleSetPrice: (amount: number) => void;
   children?: React.ReactNode;
-}) => {
+}
+
+const TipInput = ({ price, onHandleSetPrice, children }: TipInputProps) => {
   return (
     <div className="flex flex-col mx-auto px-4 py-2 gap-2">
       <div className="w-9.5/10">{children}</div>
@@ -19,3 +17,5 @@ export const TipInput = ({
     </div>
   );
 };
+
+export default TipInput;

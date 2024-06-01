@@ -2,13 +2,12 @@ import { RouterProvider } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import { Home } from "./components/Home";
-import { TipCalculatorPage } from "./components/tipcalculatorpage/TipCalculatorPage";
-
+import TipCalculator from "./components/tipcalculator/TipCalculator";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    children: [{ path: "/", element: <TipCalculatorPage /> }],
+    children: [{ path: "/", element: <TipCalculator /> }],
     errorElement: <ErrorPage />,
   },
 ]);

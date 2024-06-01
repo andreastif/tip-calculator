@@ -1,4 +1,9 @@
-export const ResetBtn = ({ onReset, children }: { onReset: () => void; children?: React.ReactNode }) => {
+interface ResetBtnProps {
+  onReset: () => void;
+  children?: React.ReactNode;
+}
+
+const ResetBtn = ({ onReset, children }: ResetBtnProps) => {
   return (
     <div className="flex flex-col mx-auto px-4 py-2 gap-2">
       <button className="btn bg-slate-300/90" onClick={onReset}>
@@ -7,3 +12,5 @@ export const ResetBtn = ({ onReset, children }: { onReset: () => void; children?
     </div>
   );
 };
+
+export default ResetBtn;
